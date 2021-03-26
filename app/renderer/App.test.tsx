@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { act, renderHook } from '@testing-library/react-hooks';
 import userEvent from '@testing-library/user-event';
 
-import { App, useStore } from './App';
+import App, { useStore } from './App';
 
 test('renders counter', () => {
   render(<App />);

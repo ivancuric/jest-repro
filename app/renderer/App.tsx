@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { hot } from 'react-hot-loader';
 import create, { SetState } from 'zustand';
 
 type AppState = {
@@ -26,7 +28,13 @@ export const useStore = create<Store>((set) => ({
   ...createActions(set),
 }));
 
-export const App = () => {
+const App = () => {
+  // trigger `act` errors
+  const add = useStore((state) => state.add);
+  useEffect(() => {
+    add(0);
+  }, [add]);
+
   return (
     <div>
       <Counter />
@@ -35,10 +43,16 @@ export const App = () => {
   );
 };
 
+export default hot(module)(App);
+
 export const Counter = () => {
   const count = useStore((state) => state.count);
 
-  return <pre data-testid="count">{count}</pre>;
+  return (
+    <strong style={{ fontSize: '40px' }} data-testid="count">
+      {count}
+    </strong>
+  );
 };
 
 export const Controls = () => {

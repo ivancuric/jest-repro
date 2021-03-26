@@ -4,7 +4,6 @@ const moduleNameMapper = getJestMappersFromTSConfig();
 
 module.exports = {
   rootDir: 'app',
-  // testPathIgnorePatterns: ['/node_modules/', '/native-addons/'],
   moduleNameMapper,
   setupFilesAfterEnv: ['../jest.setup.js'],
   transform: {

@@ -64,7 +64,6 @@ const config = {
         },
       },
     ],
-    // ['@electron-forge/plugin-auto-unpack-natives'],
   ],
 };
 

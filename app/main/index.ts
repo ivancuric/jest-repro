@@ -37,7 +37,6 @@ function createWindow() {
     height: 800,
     width: 1200,
     webPreferences: {
-      // contextIsolation needs to be false to run video-module in renderer
       contextIsolation: false,
       // devTools: !app.isPackaged,
     },

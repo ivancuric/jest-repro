@@ -9,6 +9,5 @@ module.exports = {
   setupFilesAfterEnv: ['../jest.setup.js'],
   transform: {
     '\\.(ts|js)x?$': 'babel-jest',
-    '\\.glsl$': 'jest-raw-loader',
   },
 };

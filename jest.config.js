@@ -6,6 +6,9 @@ module.exports = {
   rootDir: 'app',
   moduleNameMapper,
   setupFilesAfterEnv: ['../jest.setup.js'],
+  testEnvironment: 'jsdom',
+  testRunner: 'jest-circus/runner',
+  resetMocks: true,
   transform: {
     '\\.(ts|js)x?$': 'babel-jest',
   },
